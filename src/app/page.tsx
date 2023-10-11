@@ -8,15 +8,15 @@ import User from "@/components/user";
 import authStore from "@/store/authStore";
 
 const Home = observer(() => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [users, setUser] = useState<UserType[]>();
   const router = useRouter();
 
   useEffect(() => {
+    setLoading(true);
     if (!authStore.token) {
       router.push("login");
     }
-    setLoading(true);
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((res) => {
@@ -28,7 +28,7 @@ const Home = observer(() => {
   return (
     <>
       {loading ? (
-        <div>Loading...</div>
+        <div className="mt-12">Loading...</div>
       ) : (
         <div>
           <main className="min-h-screen max-w-7xl mx-auto px-8 xl:px-0 mt-20">

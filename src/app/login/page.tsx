@@ -16,8 +16,8 @@ const LoginPage = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username: "mor_2314",
-        password: "83r5^_",
+        username: emailRef.current?.value,
+        password: passwordRef.current?.value,
       }),
     })
       .then((res) => res.json())
@@ -51,6 +51,9 @@ const LoginPage = () => {
     <div className="flex w-full justify-center items-center h-screen">
       <div className="w-full max-w-sm">
         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <p className="mb-4">
+            Login: {'"mor_2314"'} and password: {'"83r5^_"'}
+          </p>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
