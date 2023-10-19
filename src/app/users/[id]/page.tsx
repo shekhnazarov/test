@@ -61,6 +61,15 @@ const UserDetailedPage = () => {
                 <h1 className="text-1xl font-bold mb-8 text-blue-900">
                   {user?.description || "Mahsulot haqida qisqacha"}
                 </h1>
+                <h1 className="text-1xl font-bold mb-8 text-blue-900">
+                  {user?.id || "id"}
+                </h1>
+                <h1 className="text-1xl font-bold mb-8 text-blue-900">
+                  Category: {user?.category}
+                </h1>
+                <h1 className="text-1xl font-bold mb-8 text-blue-900">
+                  {user?.description || "Mahsulot haqida qisqacha"}
+                </h1>
               </div>
             </div>
           </section>

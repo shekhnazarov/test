@@ -23,7 +23,7 @@ const Home = observer(() => {
         setUser(res);
         setLoading(false);
       })
-      .catch((error) => console.log(error));
+      .catch((errors) => console.log(errors));
   }, []);
   return (
     <>
